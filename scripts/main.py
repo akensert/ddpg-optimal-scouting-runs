@@ -24,7 +24,7 @@ if __name__ == '__main__':
     parser.add_argument('--enforce_constraints', type=int, default=0)
     parser.add_argument('--stop_action', type=int, default=0)
     parser.add_argument('--seed', type=int, default=42)
-    parser.add_argument('--name', type=str, default='ddpg_agent3')
+    parser.add_argument('--name', type=str, default='ddpg_agent')
 
     args = parser.parse_args()
 

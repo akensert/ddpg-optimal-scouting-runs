@@ -195,9 +195,9 @@ class DDPGAgent(tf.Module):
                # tf.saved_model.save(self, self.save_path + f'current_policy')
 
         if isinstance(self.save_path, str):
-            tf.saved_model.save(self, self.save_path + f'policy')
+            tf.saved_model.save(self, self.save_path + f'_policy')
             self.policy.set_weights(best_weights)
-            tf.saved_model.save(self, self.save_path + f'best_policy')
+            tf.saved_model.save(self, self.save_path + f'_best_policy')
 
         pbar.close()
 
