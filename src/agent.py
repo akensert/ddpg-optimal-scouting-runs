@@ -192,7 +192,6 @@ class DDPGAgent(tf.Module):
             if i > num_episodes//100 and running_average_reward > best_reward:
                best_reward = running_average_reward
                best_weights = self.policy.get_weights()
-               # tf.saved_model.save(self, self.save_path + f'current_policy')
 
         if isinstance(self.save_path, str):
             tf.saved_model.save(self, self.save_path + f'_policy')
