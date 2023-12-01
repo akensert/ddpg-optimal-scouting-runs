@@ -1,7 +1,7 @@
 # Twin-delayed DDPG for optimal selection of gradient scouting runs
 
 ## About
-An attempt to implement and train a DDPG agent to select optimal scouting runs for a given compound. The scouting runs are run in a simulator, using well-studied retention models. 
+An attempt to implement and train a DDPG agent to select optimal scouting runs for a given compound. The scouting runs were run in a simulator, using well-studied retention models. 
 
 > Caution: the agent is not meant to be used in real practice. 
 
@@ -11,7 +11,7 @@ The goal of this project was two-fold:
 2. If the agent learns well, get insight on what scouting runs are optimal given a certain compound. Are the choices of the agent what we expect? Are there any surprises?
 
 ## Room for improvement
-Although occasionally converging to reasonable solutions, the training is unstable. One of the main reasons for this is likely the way the rewards are calculated; as mentioned, the rewards are based on retention model fitting, which is very sensitive to the data points obtained (what scouting runs were made). (This could also be an issue when later evaluating the performance.) Below are some suggestions for improving the DDPG algorithm:
+Although occasionally converging to reasonable solutions, the training is unstable. One of the main reasons for this is likely the way the rewards are calculated; as mentioned, the rewards are based on retention model fittings, which are very sensitive to the data points obtained (what scouting runs were made). (This could also be an issue when later evaluating the performance.) Below are some suggestions for improving the DDPG algorithm:
 
 1. Modify the reward function, including better scaling (e.g., between -1.0 and 1.0)
 2. Scale actions between -1.0 and 1.0, and states between e.g. 0.0 and 1.0. Caution: need to reverse scaling in the environment.
